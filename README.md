@@ -32,3 +32,31 @@ sig.write(8)
 ```
 See the [examples](examples) folder for more details.
 
+## Addresses 
+
+Up to 8 boards can be chained together on the same i2c bus. The mcp23017 has a default address of 0x20. The Sig7Seg library allows an offset from there to be passed in when initializing.
+
+```
+sig1 = sig7seg(i2c, 0x01)
+sig2 = sig7seg(i2c, 0x02)
+sig3 = sig7seg(i2c, 0x03)
+```
+The address pins must have a jumper to pull the address either high or low. The board will not work correctly without these jumpers. The following table maps the pins to the proper address value
+
+| A0 | A1 | A2 | Begin Hex |
+|----|----|----|-----------|
+|  0 |  0 |  0 |  0x00     |
+|  1 |  0 |  0 |  0x01     |
+|  0 |  1 |  0 |  0x02     |
+|  1 |  1 |  0 |  0x03     |
+|  0 |  0 |  1 |  0x04     |
+|  1 |  0 |  1 |  0x05     |
+|  0 |  1 |  1 |  0x06     |
+|  1 |  1 |  1 |  0x07     |
+
+CircuitPython will throw an error `ValueError: No I2C device at address:` if it is not able to find a controller at the given address.
+
+## LICENSE
+Copyright 2018 b3nn
+
+Licensed under the MIT license
