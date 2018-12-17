@@ -1,7 +1,7 @@
 # Sig7Seg-i2c-mpy
 A CircuitPython library for the sig7seg-i2c controller 
 
-This library allows you to easily set numbers or segments on displays connected with the sig7seg-i2c controller using CircuitPython.
+This library allows you to easily set numbers or segments on displays connected with the sig7seg-i2c controller using CircuitPython. Boards can be purchased on [Tindie](https://www.tindie.com/products/mayfourth/sig7seg-i2c-controller-for-mechanical-7-segment/) and workd with 3.3 or 5 volt microcontrollers. A [video](https://www.youtube.com/watch?v=Gj_mTp6Ypzk) shows this board in action.
 
 # Work in Progress!!!
 This is still beta code and has not been fully tested yet. Currently using a Trinket M0.
